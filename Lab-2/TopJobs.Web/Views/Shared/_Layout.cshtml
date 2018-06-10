@@ -1,0 +1,73 @@
+﻿@using System.Web.Optimization
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Top Jobs- Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    @Styles.Render("~/bundles/bootstrap/css")
+
+    <!-- Custom fonts for this template -->
+    @Styles.Render("~/bundles/font-awesome/css")
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    @Styles.Render("~/bundles/main/css")
+
+</head>
+
+<body id="page-top">
+    @RenderBody()
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        @Html.Partial("_Navigation")
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+        @Html.Partial("_Header")
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+        @Html.Partial("_About")
+    </section>
+
+    <!-- Services Section -->
+    <section id="download" class="download-section content-section text-center">
+        @Html.Partial("_Services")
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section text-center">
+       @Html.Partial("_Contact")
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        @Html.Partial("_Footer")
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    @Scripts.Render("~/bundles/jquery/js")
+    @Scripts.Render("~/bundles/bootstrap/js")
+
+    <!-- Plugin JavaScript -->
+    @Scripts.Render("~/bundles/jquery-easing/js")
+
+    <!-- Custom scripts for this template -->
+    @Scripts.Render("~/bundles/grayscale/js")
+
+</body>
+
+</html>

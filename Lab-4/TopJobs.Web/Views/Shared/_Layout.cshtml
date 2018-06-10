@@ -1,0 +1,143 @@
+﻿@using System.Web.Optimization
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TopJobs</title>
+
+    <!-- Bootstrap core CSS -->
+    @Styles.Render("~/bundles/bootstrap/css")  
+
+    <!-- Custom fonts for this template -->
+    @Styles.Render("~/bundles/font-awesome/css")
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    @Styles.Render("~/bundles/main/css")
+
+</head>
+<body id="page-top">
+    @RenderBody()
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      @Html.Partial("_Navigation")
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading">TopJobs</h1>
+                        <p class="intro-text">
+                            A free, responsive website for finding a job.
+                        </p>
+                        <a href="#about" class="btn btn-circle js-scroll-trigger">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>About TopJobs</h2>
+                    <p>
+                        TopJobs is a website which purpose is to provide unemployed people oportunities to be hired in different companies.
+                        <p>
+                            In order to get started, simply view the companies' offers <a href="#download" class="js-scroll-trigger">here</a>.
+                    <p>
+                        This idea had occured because many people in our country have difficulties finding a new job, despite the fact that companies have multiple offers</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="download" class="download-section content-section text-center">
+        <div class="container">
+            <div class="col-lg-8 mx-auto">
+                <h2>Our offers</h2>
+                <p>Select an offer from the following tables:</p>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        @Html.ActionLink("Web Offers", "List", "List", null, new { @class = "btn btn-default btn-lg" })
+                    </li>
+                    <li class="list-inline-item">
+                        @Html.ActionLink("Software Offers", "List", "List", null , new { @class = "btn btn-default btn-lg" })
+                    </li>
+                    @Html.ActionLink("Gaming Offers", "List", "List", null, new { @class = "btn btn-default btn-lg" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Contact Start Bootstrap</h2>
+                    <p>
+                        Feel free to leave us a comment on the
+                        <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a>
+                        on Start Bootstrap to give some feedback about this theme!
+                    </p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
+                                <i class="fa fa-twitter fa-fw"></i>
+                                <span class="network-name">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
+                                <i class="fa fa-github fa-fw"></i>
+                                <span class="network-name">Github</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                                <i class="fa fa-google-plus fa-fw"></i>
+                                <span class="network-name">Google+</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Footer -->
+    <footer>
+        @Html.Partial("_Footer")
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    @Scripts.Render("~/bundles/jquery/js")
+    @Scripts.Render("~/bundles/bootstrap/js")
+
+    <!-- Plugin JavaScript -->
+    @Scripts.Render("~/bundles/jquery-easing/js")
+
+    <!-- Custom scripts for this template -->
+    @Scripts.Render("~/bundles/grayscale/js")
+
+</body>
+</html>

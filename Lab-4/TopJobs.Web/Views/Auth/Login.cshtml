@@ -1,0 +1,27 @@
+﻿
+@model TopJobs.Web.Models.User
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Create/_Layout_Blank.cshtml";
+}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(u => u.Email)<br />
+    @Html.TextBoxFor(u => u.Email)<br />
+    @Html.LabelFor(u => u.Password)<br />
+    @Html.PasswordFor(u => u.Password)<br />
+    <p>
+        <button type="submit">Login</button>
+    </p>
+
+    <a href="@Url.Action("Registration", "Auth")">Register</a>
+}
+
+
+
